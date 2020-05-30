@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Implementasi Controller
-Route::get('/', 'PageController@home');
+//Route::get('/', 'PageController@home');
 
 Route::get('/', function () {
     $tasks = [
@@ -59,6 +59,12 @@ Route::get('viewdatabase/{nama_login}', 'PostController@viewDatabase');
 
 Route::get('eloquentdatabase/{slug}', 'PostController@eloquentDatabase');
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/', function () {
+
+    return view('index');
+});
+
+Route::get('/tentang', function () {
+
+    return view('tentang');
 });
